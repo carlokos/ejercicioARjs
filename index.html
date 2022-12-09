@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GeoAR.js demo</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <div id="mensaje" style="border: 1px solid black; color: red; text-align: center;"></div>
+
+    <a-scene vr-mode-ui='enabled: false' embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+    <a-camera gps-camera rotation-reader look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'></a-camera>
+      
+        <a-assets>
+            <image id="franciscoAyala" src="franciscoAyala.jpeg">
+            <video id="instituto" autoplay loop="true" src="https://youtu.be/tDxQx1ZL8-s"></video>
+        </a-assets>
+
+        <!-- Using the asset management system. -->
+        <a-video src="#instituto" width="4" height="2.25" gps-entity-place="latitude: 37.192249; longitude: -3.616615;" rotation="0 0 -20"></a-video>
+
+        <a-image src="#franciscoAyala"></a-image>
+    </a-scene>
+  </body>
+</html>
