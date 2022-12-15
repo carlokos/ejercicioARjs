@@ -17,23 +17,44 @@
       
         <a-assets>
             <image id="franciscoAyala" src="./franciscoAyala.jpeg">
+            <image id="patio" src="./patio.jpeg">
+            <video id="celebracion" autoplay loop="true" src="./celebracion.mp4"></video>
             <video id="instituto" autoplay loop="true" src="./video.mp4"></video>
         </a-assets>
 
         <!-- Using the asset management system. -->
-        <a-video src="#instituto" 
+        <a-video 
+            src="#instituto" 
             width="4" 
             height="2.25" 
-            gps-entity-place="latitude: 37.192249; longitude: -3.616615;" 
-            look-at="[gps-camera]">
+            gps-entity-place="latitude: 37.192249; longitude: -3.616615;" >
+        </a-video>
+
+        <a-video
+            src="#celebracion"
+            width="4" 
+            height="2.25" 
+            gps-entity-place="latitude: 37.191928; longitude: -3.616868;" >
         </a-video>
 
         <a-image 
             src="#franciscoAyala"
-            gps-entity-place="latitude: 37.192205618968984; longitude: -3.616592735052109;"
-            scale="1 1 1"
-            look-at="[gps-camera]">
+            gps-entity-place="latitude: 37.192227; longitude: -3.616927;"
+            scale="1 1 1">
         </a-image>
+
+        <a-image 
+            src="#patio"
+            gps-entity-place="latitude: 37.192071; longitude: -3.616857;"
+            scale="1 1 1">
+        </a-image>
+
+        <a-text
+            value="IES franciscoAyala"
+            look-at="[gps-camera]"
+            scale = "60 60 60"
+            gps-entity-place="latitude: 37.192148, ; longitude: -3.616838;">
+        </a-text>
 
         <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
