@@ -16,14 +16,26 @@
     <a-camera gps-camera rotation-reader look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'></a-camera>
       
         <a-assets>
-            <image id="franciscoAyala" src="franciscoAyala.jpeg">
-            <video id="instituto" autoplay loop="true" src="https://youtu.be/tDxQx1ZL8-s"></video>
+            <image id="franciscoAyala" src="./franciscoAyala.jpeg">
+            <video id="instituto" autoplay loop="true" src="./video.mp4"></video>
         </a-assets>
 
         <!-- Using the asset management system. -->
-        <a-video src="#instituto" width="4" height="2.25" gps-entity-place="latitude: 37.192249; longitude: -3.616615;" rotation="0 0 -20"></a-video>
+        <a-video src="#instituto" 
+            width="4" 
+            height="2.25" 
+            gps-entity-place="latitude: 37.192249; longitude: -3.616615;" 
+            look-at="[gps-camera]">
+        </a-video>
 
-        <a-image src="#franciscoAyala"></a-image>
+        <a-image 
+            src="#franciscoAyala"
+            gps-entity-place="latitude: 37.192205618968984; longitude: -3.616592735052109;"
+            scale="1 1 1"
+            look-at="[gps-camera]">
+        </a-image>
+
+        <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
   </body>
 </html>
